@@ -2180,3 +2180,9 @@
 2026/02/08 17:54:40 "GET http://api.phatlas.top:2053/api/datasets HTTP/1.1" from 127.0.0.1:51578 - 200 86B in 242.015µs
 2026/02/08 17:54:43 "GET http://api.phatlas.top:2053/d/phatlas/api/metadata HTTP/1.1" from 127.0.0.1:51578 - 200 164561B in 64.117787ms
 2026/02/08 17:56:25 "POST http://api.phatlas.top/api HTTP/1.1" from 127.0.0.1:49498 - 404 43B in 240.782µs
+2026/02/08 18:11:58 "GET http://api.phatlas.top/api/datasets HTTP/1.1" from 127.0.0.1:49362 - 200 86B in 321.486µs
+2026/02/08 18:11:59 "GET http://api.phatlas.top/d/phatlas/api/metadata HTTP/1.1" from 127.0.0.1:49362 - 200 164561B in 66.294403ms
+2026/02/08 18:12:02 "GET http://api.phatlas.top/d/phatlas/api/categories/GSE_id/centroids?coord=X_umap HTTP/1.1" from 127.0.0.1:49362 - 200 354B in 451.905µs
+2026/02/08 18:12:02 "GET http://api.phatlas.top/d/phatlas/api/categories/GSE_id/colors?coord=X_umap HTTP/1.1" from 127.0.0.1:49362 - 200 116B in 213.699µs
+2026/02/08 18:12:02 "GET http://api.phatlas.top/d/phatlas/api/genes?coord=X_umap HTTP/1.1" from 127.0.0.1:49362 - 200 56479B in 19.569838ms
+2026/02/08 18:12:03 "GET http://api.phatlas.top/d/phatlas/api/categories/GSE_id/legend?coord=X_umap HTTP/1.1" from 127.0.0.1:49362 - 200 192B in 1.603659ms

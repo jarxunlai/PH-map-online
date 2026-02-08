@@ -293,7 +293,7 @@ make preprocess \
     OUTPUT=/home/ljx/bash_hub/PH-map-online/data/phatlas \
     ZOOM_LEVEL=12 \
     PREPROCESS_NO_SOMA=0 \
-    PREPROCESS_ALL_EXPRESSED=1 
+    PREPROCESS_ALL_EXPRESSED=1
 ```
 ```
 atlasmap-preprocess run \
