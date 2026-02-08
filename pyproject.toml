@@ -1,0 +1,10 @@
+[project]
+name = "ph-map-online"
+version = "0.1.0"
+description = "PH Atlas online visualization — deployment project for AtlasMap-SC"
+requires-python = ">=3.11"
+dependencies = []
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

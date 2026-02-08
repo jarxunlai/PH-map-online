@@ -1,0 +1,114 @@
+Found uv: uv 0.9.17
+Installing preprocessing deps into .venv...
+Resolved 74 packages in 871ms
+   Building atlasmap-preprocess @ file:///home/ljx/bash_hub/atlasmap-sc/preprocessing
+      Built atlasmap-preprocess @ file:///home/ljx/bash_hub/atlasmap-sc/preprocessing
+Prepared 1 package in 709ms
+Uninstalled 1 package in 1ms
+Installed 1 package in 2ms
+ ~ atlasmap-preprocess==0.2.0 (from file:///home/ljx/bash_hub/atlasmap-sc/preprocessing)
+Running preprocessing pipeline...
+Preprocess: zoom_levels=12, var_names_key=, all_expressed=1, min_cells=1, n_genes=500, no_soma=0, max_cat_card=2000
+2026-02-08 00:51:45,521 - __main__ - INFO - Starting preprocessing pipeline
+2026-02-08 00:51:45,521 - __main__ - INFO - Input: /home/ljx/bash_hub/PH-map-online/data/lung_atlas_light.h5ad
+2026-02-08 00:51:45,521 - __main__ - INFO - Output: /home/ljx/bash_hub/PH-map-online/data/phatlas
+2026-02-08 00:51:45,521 - atlasmap_preprocess.pipeline - INFO - Starting preprocessing pipeline
+2026-02-08 00:51:45,522 - atlasmap_preprocess.pipeline - INFO - Loading H5AD from: /home/ljx/bash_hub/PH-map-online/data/lung_atlas_light.h5ad
+2026-02-08 00:52:15,452 - atlasmap_preprocess.pipeline - INFO - Loaded 235,621 cells, 21,977 genes
+2026-02-08 00:52:15,453 - atlasmap_preprocess.pipeline - INFO - Extracting coordinates from obsm['X_umap']
+2026-02-08 00:52:15,470 - atlasmap_preprocess.pipeline - INFO - Normalized 'X_umap' to [0, 256.0), shape: (235621, 2)
+2026-02-08 00:52:15,470 - atlasmap_preprocess.pipeline - INFO - Selecting genes for pre-aggregation
+2026-02-08 00:52:17,627 - atlasmap_preprocess.genes.selector - INFO - Found 21345 genes expressed in >= 1 cells (out of 21977 total genes)
+2026-02-08 00:52:17,633 - atlasmap_preprocess.genes.selector - INFO - Final selection (all expressed): 21345 genes
+2026-02-08 00:52:17,633 - atlasmap_preprocess.pipeline - INFO - Selected 21345 genes for pre-aggregation
+2026-02-08 00:52:17,633 - atlasmap_preprocess.pipeline - INFO - Building category mappings
+2026-02-08 00:52:17,669 - atlasmap_preprocess.pipeline - INFO -   sample: 64 categories
+2026-02-08 00:52:17,708 - atlasmap_preprocess.pipeline - INFO -   dataset: 6 categories
+2026-02-08 00:52:17,744 - atlasmap_preprocess.pipeline - INFO -   study: 6 categories
+2026-02-08 00:52:17,768 - atlasmap_preprocess.pipeline - INFO -   group: 4 categories
+2026-02-08 00:52:17,796 - atlasmap_preprocess.pipeline - INFO -   tissue: 6 categories
+2026-02-08 00:52:17,823 - atlasmap_preprocess.pipeline - INFO -   anno_lv1: 6 categories
+2026-02-08 00:52:17,851 - atlasmap_preprocess.pipeline - INFO -   anno_lv2: 20 categories
+2026-02-08 00:52:17,885 - atlasmap_preprocess.pipeline - INFO -   anno_lv3: 31 categories
+2026-02-08 00:52:17,928 - atlasmap_preprocess.pipeline - INFO -   anno_lv4: 58 categories
+2026-02-08 00:52:17,984 - atlasmap_preprocess.pipeline - INFO -   predicted_doublets: 2 categories
+2026-02-08 00:52:17,993 - atlasmap_preprocess.pipeline - INFO -   GSE_id: 6 categories
+2026-02-08 00:52:18,018 - atlasmap_preprocess.pipeline - INFO -   GSM_id: 64 categories
+2026-02-08 00:52:18,042 - atlasmap_preprocess.pipeline - INFO -   gender: 3 categories
+2026-02-08 00:52:18,081 - atlasmap_preprocess.pipeline - INFO -   technology: 7 categories
+2026-02-08 00:52:18,081 - atlasmap_preprocess.pipeline - INFO - Building 12 zoom levels
+2026-02-08 00:52:18,104 - atlasmap_preprocess.pipeline - INFO - Writing Zarr bins for 'X_umap' -> /home/ljx/bash_hub/PH-map-online/data/phatlas/zarr/bins.zarr
+2026-02-08 00:52:18,176 - atlasmap_preprocess.pipeline - INFO - Computed bin pyramid for 'X_umap': zoom 11 has 212,743 non-empty bins
+Writing zoom levels (X_umap):   0%|          | 0/12 [00:00<?, ?it/s]2026-02-08 00:54:54,162 - atlasmap_preprocess.io.zarr_writer - INFO - Wrote base arrays for 212,743 bins (zoom 11)
+Writing zoom levels (X_umap):   8%|▊         | 1/12 [10:13<1:52:30, 613.71s/it]2026-02-08 01:04:33,268 - atlasmap_preprocess.io.zarr_writer - INFO - Wrote base arrays for 162,047 bins (zoom 10)
+Writing zoom levels (X_umap):  17%|█▋        | 2/12 [16:47<1:20:45, 484.56s/it]2026-02-08 01:10:21,654 - atlasmap_preprocess.io.zarr_writer - INFO - Wrote base arrays for 77,902 bins (zoom 9)
+Writing zoom levels (X_umap):  25%|██▌       | 3/12 [18:06<44:52, 299.21s/it]  2026-02-08 01:11:08,624 - atlasmap_preprocess.io.zarr_writer - INFO - Wrote base arrays for 24,585 bins (zoom 8)
+Writing zoom levels (X_umap):  33%|███▎      | 4/12 [18:31<25:28, 191.07s/it]2026-02-08 01:11:22,106 - atlasmap_preprocess.io.zarr_writer - INFO - Wrote base arrays for 6,966 bins (zoom 7)
+Writing zoom levels (X_umap):  42%|████▏     | 5/12 [18:39<14:34, 124.93s/it]2026-02-08 01:11:25,906 - atlasmap_preprocess.io.zarr_writer - INFO - Wrote base arrays for 1,976 bins (zoom 6)
+Writing zoom levels (X_umap):  50%|█████     | 6/12 [18:41<08:19, 83.25s/it] 2026-02-08 01:11:27,356 - atlasmap_preprocess.io.zarr_writer - INFO - Wrote base arrays for 577 bins (zoom 5)
+Writing zoom levels (X_umap):  58%|█████▊    | 7/12 [18:42<04:41, 56.35s/it]2026-02-08 01:11:28,241 - atlasmap_preprocess.io.zarr_writer - INFO - Wrote base arrays for 174 bins (zoom 4)
+Writing zoom levels (X_umap):  67%|██████▋   | 8/12 [18:43<02:34, 38.62s/it]2026-02-08 01:11:28,930 - atlasmap_preprocess.io.zarr_writer - INFO - Wrote base arrays for 54 bins (zoom 3)
+Writing zoom levels (X_umap):  75%|███████▌  | 9/12 [18:44<01:20, 26.75s/it]2026-02-08 01:11:29,573 - atlasmap_preprocess.io.zarr_writer - INFO - Wrote base arrays for 15 bins (zoom 2)
+Writing zoom levels (X_umap):  83%|████████▎ | 10/12 [18:44<00:37, 18.68s/it]2026-02-08 01:11:30,115 - atlasmap_preprocess.io.zarr_writer - INFO - Wrote base arrays for 4 bins (zoom 1)
+Writing zoom levels (X_umap):  92%|█████████▏| 11/12 [18:45<00:13, 13.13s/it]2026-02-08 01:11:31,293 - atlasmap_preprocess.io.zarr_writer - INFO - Wrote base arrays for 1 bins (zoom 0)
+Writing zoom levels (X_umap): 100%|██████████| 12/12 [18:46<00:00,  9.49s/it]Writing zoom levels (X_umap): 100%|██████████| 12/12 [18:46<00:00, 93.87s/it]
+Writing categories (X_umap):   0%|          | 0/14 [00:00<?, ?it/s]Writing categories (X_umap):   7%|▋         | 1/14 [00:02<00:28,  2.22s/it]Writing categories (X_umap):  14%|█▍        | 2/14 [00:03<00:20,  1.68s/it]Writing categories (X_umap):  21%|██▏       | 3/14 [00:05<00:17,  1.62s/it]Writing categories (X_umap):  29%|██▊       | 4/14 [00:05<00:13,  1.33s/it]Writing categories (X_umap):  36%|███▌      | 5/14 [00:06<00:10,  1.15s/it]Writing categories (X_umap):  43%|████▎     | 6/14 [00:07<00:09,  1.17s/it]Writing categories (X_umap):  50%|█████     | 7/14 [00:08<00:07,  1.11s/it]Writing categories (X_umap):  57%|█████▋    | 8/14 [00:10<00:06,  1.11s/it]Writing categories (X_umap):  64%|██████▍   | 9/14 [00:11<00:05,  1.20s/it]Writing categories (X_umap):  71%|███████▏  | 10/14 [00:12<00:04,  1.08s/it]Writing categories (X_umap):  79%|███████▊  | 11/14 [00:13<00:03,  1.01s/it]Writing categories (X_umap):  86%|████████▌ | 12/14 [00:14<00:02,  1.21s/it]Writing categories (X_umap):  93%|█████████▎| 13/14 [00:15<00:01,  1.11s/it]Writing categories (X_umap): 100%|██████████| 14/14 [00:16<00:00,  1.04s/it]                                                                            Writing numeric (X_umap): 0it [00:00, ?it/s]                                            2026-02-08 01:11:47,860 - atlasmap_preprocess.io.zarr_writer - INFO - Finalized Zarr store at: /home/ljx/bash_hub/PH-map-online/data/phatlas/zarr/bins.zarr
+2026-02-08 01:11:47,860 - atlasmap_preprocess.pipeline - INFO - Zarr data written to: /home/ljx/bash_hub/PH-map-online/data/phatlas/zarr/bins.zarr
+2026-02-08 01:11:52,642 - atlasmap_preprocess.pipeline - INFO - Writing TileDBSOMA store
+2026-02-08 01:11:52,647 - atlasmap_preprocess.io.soma_writer - INFO - Writing SOMA Experiment to: /home/ljx/bash_hub/PH-map-online/data/phatlas/soma/experiment.soma
+2026-02-08 01:11:55,873 - atlasmap_preprocess.io.soma_writer - INFO - Writing obs DataFrame: 235621 cells
+2026-02-08 01:11:59,821 - atlasmap_preprocess.io.soma_writer - INFO - Writing var DataFrame: 21977 genes
+2026-02-08 01:11:59,876 - atlasmap_preprocess.io.soma_writer - INFO - Writing expression matrix: (235621, 21977)
+2026-02-08 01:12:00,859 - atlasmap_preprocess.io.soma_writer - INFO - Writing 450,520,174 non-zero values in chunks
+2026-02-08 01:12:03,639 - atlasmap_preprocess.io.soma_writer - INFO -   Written 10,000,000/450,520,174 values
+2026-02-08 01:12:05,882 - atlasmap_preprocess.io.soma_writer - INFO -   Written 20,000,000/450,520,174 values
+2026-02-08 01:12:09,339 - atlasmap_preprocess.io.soma_writer - INFO -   Written 30,000,000/450,520,174 values
+2026-02-08 01:12:12,291 - atlasmap_preprocess.io.soma_writer - INFO -   Written 40,000,000/450,520,174 values
+2026-02-08 01:12:14,229 - atlasmap_preprocess.io.soma_writer - INFO -   Written 50,000,000/450,520,174 values
+2026-02-08 01:12:16,415 - atlasmap_preprocess.io.soma_writer - INFO -   Written 60,000,000/450,520,174 values
+2026-02-08 01:12:18,986 - atlasmap_preprocess.io.soma_writer - INFO -   Written 70,000,000/450,520,174 values
+2026-02-08 01:12:21,124 - atlasmap_preprocess.io.soma_writer - INFO -   Written 80,000,000/450,520,174 values
+2026-02-08 01:12:24,614 - atlasmap_preprocess.io.soma_writer - INFO -   Written 90,000,000/450,520,174 values
+2026-02-08 01:12:28,089 - atlasmap_preprocess.io.soma_writer - INFO -   Written 100,000,000/450,520,174 values
+2026-02-08 01:12:30,292 - atlasmap_preprocess.io.soma_writer - INFO -   Written 110,000,000/450,520,174 values
+2026-02-08 01:12:33,126 - atlasmap_preprocess.io.soma_writer - INFO -   Written 120,000,000/450,520,174 values
+2026-02-08 01:12:36,471 - atlasmap_preprocess.io.soma_writer - INFO -   Written 130,000,000/450,520,174 values
+2026-02-08 01:12:39,102 - atlasmap_preprocess.io.soma_writer - INFO -   Written 140,000,000/450,520,174 values
+2026-02-08 01:12:41,523 - atlasmap_preprocess.io.soma_writer - INFO -   Written 150,000,000/450,520,174 values
+2026-02-08 01:12:43,969 - atlasmap_preprocess.io.soma_writer - INFO -   Written 160,000,000/450,520,174 values
+2026-02-08 01:12:46,984 - atlasmap_preprocess.io.soma_writer - INFO -   Written 170,000,000/450,520,174 values
+2026-02-08 01:12:50,926 - atlasmap_preprocess.io.soma_writer - INFO -   Written 180,000,000/450,520,174 values
+2026-02-08 01:12:53,900 - atlasmap_preprocess.io.soma_writer - INFO -   Written 190,000,000/450,520,174 values
+2026-02-08 01:12:57,180 - atlasmap_preprocess.io.soma_writer - INFO -   Written 200,000,000/450,520,174 values
+2026-02-08 01:13:00,060 - atlasmap_preprocess.io.soma_writer - INFO -   Written 210,000,000/450,520,174 values
+2026-02-08 01:13:02,327 - atlasmap_preprocess.io.soma_writer - INFO -   Written 220,000,000/450,520,174 values
+2026-02-08 01:13:05,482 - atlasmap_preprocess.io.soma_writer - INFO -   Written 230,000,000/450,520,174 values
+2026-02-08 01:13:08,545 - atlasmap_preprocess.io.soma_writer - INFO -   Written 240,000,000/450,520,174 values
+2026-02-08 01:13:12,152 - atlasmap_preprocess.io.soma_writer - INFO -   Written 250,000,000/450,520,174 values
+2026-02-08 01:13:16,938 - atlasmap_preprocess.io.soma_writer - INFO -   Written 260,000,000/450,520,174 values
+2026-02-08 01:13:21,514 - atlasmap_preprocess.io.soma_writer - INFO -   Written 270,000,000/450,520,174 values
+2026-02-08 01:13:24,084 - atlasmap_preprocess.io.soma_writer - INFO -   Written 280,000,000/450,520,174 values
+2026-02-08 01:13:27,673 - atlasmap_preprocess.io.soma_writer - INFO -   Written 290,000,000/450,520,174 values
+2026-02-08 01:13:32,298 - atlasmap_preprocess.io.soma_writer - INFO -   Written 300,000,000/450,520,174 values
+2026-02-08 01:13:34,994 - atlasmap_preprocess.io.soma_writer - INFO -   Written 310,000,000/450,520,174 values
+2026-02-08 01:13:38,248 - atlasmap_preprocess.io.soma_writer - INFO -   Written 320,000,000/450,520,174 values
+2026-02-08 01:13:41,246 - atlasmap_preprocess.io.soma_writer - INFO -   Written 330,000,000/450,520,174 values
+2026-02-08 01:13:45,867 - atlasmap_preprocess.io.soma_writer - INFO -   Written 340,000,000/450,520,174 values
+2026-02-08 01:13:48,601 - atlasmap_preprocess.io.soma_writer - INFO -   Written 350,000,000/450,520,174 values
+2026-02-08 01:13:52,033 - atlasmap_preprocess.io.soma_writer - INFO -   Written 360,000,000/450,520,174 values
+2026-02-08 01:13:54,382 - atlasmap_preprocess.io.soma_writer - INFO -   Written 370,000,000/450,520,174 values
+2026-02-08 01:13:56,924 - atlasmap_preprocess.io.soma_writer - INFO -   Written 380,000,000/450,520,174 values
+2026-02-08 01:13:59,881 - atlasmap_preprocess.io.soma_writer - INFO -   Written 390,000,000/450,520,174 values
+2026-02-08 01:14:02,323 - atlasmap_preprocess.io.soma_writer - INFO -   Written 400,000,000/450,520,174 values
+2026-02-08 01:14:05,855 - atlasmap_preprocess.io.soma_writer - INFO -   Written 410,000,000/450,520,174 values
+2026-02-08 01:14:08,421 - atlasmap_preprocess.io.soma_writer - INFO -   Written 420,000,000/450,520,174 values
+2026-02-08 01:14:10,933 - atlasmap_preprocess.io.soma_writer - INFO -   Written 430,000,000/450,520,174 values
+2026-02-08 01:14:13,900 - atlasmap_preprocess.io.soma_writer - INFO -   Written 440,000,000/450,520,174 values
+2026-02-08 01:14:16,074 - atlasmap_preprocess.io.soma_writer - INFO -   Written 450,000,000/450,520,174 values
+2026-02-08 01:14:16,299 - atlasmap_preprocess.io.soma_writer - INFO - SOMA Experiment written successfully
+2026-02-08 01:14:16,429 - atlasmap_preprocess.io.soma_writer - INFO - Finalized SOMA store at: /home/ljx/bash_hub/PH-map-online/data/phatlas/soma/experiment.soma
+2026-02-08 01:14:16,430 - atlasmap_preprocess.pipeline - INFO - SOMA store written to: /home/ljx/bash_hub/PH-map-online/data/phatlas/soma/experiment.soma
+2026-02-08 01:14:16,430 - atlasmap_preprocess.pipeline - INFO - Writing metadata
+2026-02-08 01:14:16,452 - atlasmap_preprocess.pipeline - INFO - Metadata written to: /home/ljx/bash_hub/PH-map-online/data/phatlas/zarr
+2026-02-08 01:14:16,452 - atlasmap_preprocess.pipeline - INFO - Pipeline completed successfully
+2026-02-08 01:14:16,452 - __main__ - INFO - Preprocessing completed successfully!

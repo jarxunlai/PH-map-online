@@ -1,0 +1,30 @@
+# === Data (large files) ===
+data/*.h5ad
+data/**/zarr/
+data/**/soma/
+
+# === Trash ===
+.Trash/
+
+# === Python ===
+__pycache__/
+*.pyc
+*.egg-info/
+.venv/
+
+# === Node / Frontend build ===
+node_modules/
+dist/
+
+# === OS ===
+.DS_Store
+Thumbs.db
+
+# === cloudflared binary ===
+cloudflared
+
+# === IDE ===
+.idea/
+.vscode/
+*.swp
+*.swo
